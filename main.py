@@ -17,7 +17,7 @@ def main_dev():
     saves_filenames = filenames
   saves_filenames.sort()
   saves = [saveformat.Save(os.path.join(save_folder,save_filename)) for save_filename in saves_filenames]
---
+
   for save in saves:
     save.load()
   saves.sort(key=lambda x : x.props.get('mtime'))
@@ -28,7 +28,7 @@ def main_dev():
     print(save.repr())
     print_props(save.header.props)
 
-def termprint(x,step=0.0):
+def termprint(x,step=0.05):
   time.sleep(50 * step)
   for c in x:
     print(c,end='')
@@ -46,7 +46,7 @@ ROBOCO INDUSTRIES (TM) TERMINK PROTOCOL
   termprint(banner+'\n\n\n')
   termprint('Identifying runtime :\n\n')
 
---
+
   runtime_props = {}
   runtime_props['01 system'] = platform.system()
   runtime_props['02 platform'] = platform.platform()
@@ -67,7 +67,7 @@ ROBOCO INDUSTRIES (TM) TERMINK PROTOCOL
   saves = [saveformat.Save(os.path.join(save_folder,save_filename)) for save_filename in saves_filenames]
   termprint('Found {} saves.\n'.format(len(saves)))
   termprint('Parsing..\n')
---
+
   for save in saves:
     save.load()
 
