@@ -1,6 +1,7 @@
 # Fallout4 save file dissector
 
-Just download the zip and click main.py
+Just download the zip and click main.py. You must have a version of python installed. 2.7 and 3k should work.
+
 This programs lists the fallout 4 save files identified in the default location.
 
 This is just a little crappy attempt to reverse-engineer the save file format, because i'm sick of writing down weapons properties to perform a manual comparison.
