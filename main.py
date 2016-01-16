@@ -28,7 +28,7 @@ def main_dev():
     print(save.repr())
     print_props(save.header.props)
 
-def termprint(x,step=0.05):
+def termprint(x,step=0.01):
   time.sleep(50 * step)
   for c in x:
     print(c,end='')
